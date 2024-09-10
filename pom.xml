@@ -58,6 +58,11 @@
             <artifactId>spring-beans</artifactId>
             <version>6.1.12</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

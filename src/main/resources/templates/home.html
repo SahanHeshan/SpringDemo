@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
-<head>
-    <title>Home</title>
-</head>
-
-<body>
 <h1>Registered Users</h1>
-<ul>
-    <li th:each="user : ${users}">
-        <span th:text="${user.name}"></span> - Marks: <span th:text="${user.marks}"></span>
-    </li>
-</ul>
+<table border="1px solid black" cellpadding="5px">
+    <thead>
+    <tr>
+        <th>User</th>
+        <th>Marks</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.marks}"></td>
+    </tr>
+    </tbody>
+</table>
+
 
 <h2>Add Marks</h2>
 <form action="/addMarks" method="post">
@@ -21,5 +24,3 @@
     <button type="submit">Add Marks</button>
 </form>
 
-</body>
-</html>

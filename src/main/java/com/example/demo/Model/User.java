@@ -4,40 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
+//I combined Entity and Model for Simplicity
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
     private String email;
     private String password;
     private Integer marks;
-
-
-    public Long getId() {return id;}
-    public String getName() {return name;}
-    public String getEmail() {return email;}
-    public String getPassword() {return password;}
-    public Integer getMarks() {return marks;}
-
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public void setMarks(Integer marks) {
-        this.marks = marks;
-    }
-
-
 }
